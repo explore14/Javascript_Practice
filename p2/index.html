@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div>
+      <input type="number" name="" id="n1" />
+      <input type="text" name="" id="n2" />
+      <div class="buttongroup">
+        <button >+</button>
+        <button >-</button>
+        <button>*</button>
+        <button>/</button>
+      </div>
+
+      <div>
+        <h1 id="answer">0</h1>
+       
+      </div>
+    </div>
+  </body>
+  <script>
+    let n1=document.getElementById("n1");
+    let n2=document.getElementById("n2");
+    let ans=document.getElementById("answer");
+    let allbutton=document.getElementsByTagName("button")
+    for (let i = 0; i < allbutton.length; i++) {
+        allbutton[i].addEventListener("click",function(){
+                    let expression = `${n1.value} ${allbutton[i].innerText}  ${n2.value}`
+                    ans.innerHTML=eval(expression)
+        })
+        
+    }
+   
+  </script>
+</html>

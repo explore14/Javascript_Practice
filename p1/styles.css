@@ -1,0 +1,28 @@
+button {
+    padding: 25px;
+    font-size: 3em;
+    border-radius: 5px;
+    background-color:green;
+    color: white;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    
+    
+}
+span{
+    font-size:5rem;
+}
+
+.container {
+    background-color: lightblue;
+    margin-top: 50px;
+    text-align: center;
+   
+    padding: 120px 50px 20px 50px;
+    border-radius: 50px;
+}

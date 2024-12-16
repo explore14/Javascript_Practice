@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body class="d-flex flex-column justify-content-center vh-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-5 col-md-5">
+                    <div class="calculator">
+                        <div class="calculator-title">
+                            <h5 class="display-5 p-2 text-white">Calculator</h5>
+                        </div>
+                        <div class="calculator-input d-flex flex-column justify-content-center">
+                            <input type="text" class="w-100 bg-transparent fs-1 "name="" id="field">
+                            <input type="text" class="w-100 bg-transparent" name="num" id="answer">
+
+
+                        </div>
+                        <div class="calculator-button">
+                            <button class="btn" onclick="delAll();">AC</button>
+                            <button class="btn del" onclick="delValue();">del</button>
+                            <button class="btn  operation">%</button>
+                            <button class="btn btn-light rounded-circle text-dark  operation">/</button>
+                            <button class="btn num">7</button>
+                            <button class="btn num">8</button>
+                            <button class="btn num">9</button>
+                            <button class="btn btn-light rounded-circle text-dark operation">*</button>
+                            <button class="btn num">4</button>
+                            <button class="btn num">5</button>
+                            <button class="btn num">6</button>
+                            <button class="btn btn-light rounded-circle text-dark operation">-</button>
+                            <button class="btn num">1</button>
+                            <button class="btn num">2</button>
+                            <button class="btn num">3</button>
+                            <button class="btn btn-light rounded-circle text-dark operation">+</button>
+                            <button class="btn num">00</button>
+                            <button class="btn num">0</button>
+                            <button class="btn ">.</button>
+                            <button class="btn btn-light rounded-circle text-dark" onclick="calculate();">=</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>
+<style>
+    body{
+       width:100%;
+       background-color:azure; 
+    }
+    .calculator{
+        height:500px;
+        border:1px solid white;
+        border-radius: 10px;
+        background-color:rgb(51, 91, 89);
+
+    }
+    .calculator-title{
+        height:10%;
+    }
+    .calculator-input{
+        height:30%;
+    }
+    .calculator-input input{
+        border:none;
+        text-align:end;
+        color:white;
+    }
+    .calculator-input input:focus-visible{
+        outline:0px;
+    }
+    .calculator-button{
+        height:60%;
+        background-color: black;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .calculator-button button{
+        width:25%;
+        height:20%;
+        /* background-color:transparent; */
+        border:0px;
+        color:white;
+    }
+    .btn-light{
+        scale:0.7;
+        font-weight:500;
+        font-size:25px;
+    }
+
+</style>

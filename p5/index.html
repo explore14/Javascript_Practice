@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main>
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column g-3 justify-content-between" id="left"></div>
+                        <div class="col-6" id="right"></div>
+                    </div>
+
+
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+    <style>
+        #left{
+            height: 100dvh;
+        }
+        #left img{
+            height: 160px;
+            width: 160px;
+            
+            border-radius: 30px;
+        }
+        #left img:hover{
+            filter: blur(0px)
+            ;
+        }
+        #right img{
+            
+        height:70dvh;
+        width: 100%;
+        }
+    </style>
+    <script>
+        let a=[2,4,5,6,7];
+        let left=document.getElementById("left");
+        let right=document.getElementById("right");
+        let items=[
+            {
+                id:1,
+                src:"https://img.freepik.com/free-psd/running-shoes-sneakers-transparent-background_84443-1702.jpg?t=st=1717847425~exp=1717851025~hmac=9d71435e8a27d6a4d3c400d9811e2f1c1f85b50372d55ad833136cfe0638d54f&w=740",
+                price:499
+            },
+            {
+                id:2,
+                src:"https://img.freepik.com/free-psd/running-shoes-sneakers-transparent-background_84443-1652.jpg?t=st=1717847640~exp=1717851240~hmac=1e6afbc3450d4b34a587fa4df0afa28501004175536a1272a3999e5618a8fd04&w=740",
+                price:699
+            },
+            {
+                id:3,
+                src:"https://img.freepik.com/free-psd/running-shoes-sneakers-transparent-background_84443-1686.jpg?t=st=1717847668~exp=1717851268~hmac=ac2ca5f378c5ce67858f848c0b8f3bffae08e66092411fb171b4fb3d13d8e3da&w=740",
+                price:450
+            },
+            {
+                id:4,
+                src:"https://img.freepik.com/free-photo/pair-trainers_144627-3799.jpg?t=st=1717847724~exp=1717851324~hmac=1c2e3d150da9ba75d3a972d7836c9035883f0720b0ef6307ad11c4562dc648b5&w=826",
+                price:570
+            },
+        ]
+        let temp=document.getElementsByClassName("row");
+        for (let i = 0; i < items.length; i++) {
+
+            left.innerHTML+=`<img onclick="  viewImage(${items[i].id})" src=${items[i].src}>`
+            
+        }
+        function viewImage(id){
+            let item;
+            for (let i = 0; i < items.length; i++) {
+                if(items[i].id==id){
+                    item=items[i];
+                }
+            }
+            right.innerHTML=`
+            <div >
+            <img src=${item.src}>
+            <h3 class="fw-bolder text-danger"><del class="text-muted me-2">Rs. 3299</del>Rs.${item.price}</h3>
+            </div>
+            `;
+        }
+        
+        // for (let i = 0; i < a.length; i++) {
+        //     temp[0].innerHTML+=`<div class ="col-2 text-danger fw-bolder  fs-1">${a[i]}</div>`;
+            
+        // }
+    </script>
+</html>
